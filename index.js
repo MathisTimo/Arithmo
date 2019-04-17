@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const Discord = require('discord.js')
 const client = new Discord.Client()
 const fetch = require('node-fetch');
@@ -108,5 +110,4 @@ client.on('message', message => {
   message.reply(':x: Sorry but this calculation is too hard for me !\n Type **!a** help to see what I am capable of :muscle:\n');
 }
 })
-
-client.login('NTY3Mzg4NzQyMjMxMjYxMjI1.XLS0Kg.e_dF_ZRRp9rvGUQhh4okt8px-Fw')
+client.login(process.env.BOT_TOKEN)
