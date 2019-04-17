@@ -4,6 +4,7 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 const fetch = require('node-fetch');
 var msg = 'rien';
+var discordKey = process.env.api_key;
 
 client.on('error', console.error);
 
@@ -110,4 +111,4 @@ client.on('message', message => {
   message.reply(':x: Sorry but this calculation is too hard for me !\n Type **!a** help to see what I am capable of :muscle:\n');
 }
 })
-client.login(process.env.BOT_TOKEN)
+client.login(discordKey)
